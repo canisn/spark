@@ -1,0 +1,57 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}title{% endblock %}</title>
+
+    <!-- style -->
+{#    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">#}
+{#    <link rel="stylesheet" href="{% static '/css/defaultMarkDown.css' %}">#}
+    <link rel="stylesheet" href="{% static '/css/custom.css' %}">
+
+    <!-- script -->
+{#    <script src="{% static '/js/jquery-3.2.1.js' %}"></script>#}
+{#    <script src="{% static '/js/bootstrap.js' %}"></script>#}
+{#    <script src="{% static '/js/echarts.js' %}"></script>#}
+    <script src="{% static '/js/custom.js' %}"></script>
+
+</head>
+<body>
+    <!-- header -->
+    {% block header %}
+        <div class="header">
+            <ul class="link">
+                <li class="logo">
+                    <a src="index/"><h1>canisn</h1></a>
+                </li>
+                <li><a src="#">link2</a></li>
+                <li><a src="#">link3</a></li>
+                <li><a src="#">link4</a></li>
+            </ul>
+        </div>
+    {% endblock %}
+
+    <!-- content -->
+    {% block content %}
+        <p>May the force be with you.</p>
+    {% endblock %}
+
+    <!-- footer -->
+    {% block footer %}
+        <div class="footer">
+            <div class="inner">
+                <ul class="icon">
+                    <li><a href="#">icon1</a></li>
+                    <li><a href="#">icon2</a></li>
+                    <li><a href="#">icon3</a></li>
+                    <li><a href="#">icon4</a></li>
+                </ul>
+                <p>&copy&nbsp;canisn&nbsp;&nbsp;2017-05-05</p>
+            </div>
+        </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}articleView{% endblock %}
+
+{% block content %}
+    <div id="content_test">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus modi maiores officia, voluptatum suscipit alias quidem iusto quaerat aliquam, consequatur a in dolore illo dolorum eaque cumque cupiditate consectetur odio?</p>
+    </div>
+    {% csrf_token %}
+    <button id="button_test">点击试试</button>
+    <div id="main"></div>
+{% endblock %}

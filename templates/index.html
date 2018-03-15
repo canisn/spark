@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}index{% endblock %}
+
+{% block content %}
+    <div class="banner">
+        <div class="inner">
+            <div class="entry" id ="entryButton"></div>
+            <div class="link mission-link">
+                <a class="button" data-title="My mission is clear">
+                <span class="line line-top"></span>
+                <span class="line line-right"></span>
+                <span class="line line-bottom"></span>
+                <span class="line line-left"></span>
+                Mission
+                </a>
+            </div>
+            <div class="link play-link">
+                <a class="button" data-title="This is my playground">
+                <span class="line line-top"></span>
+                <span class="line line-right"></span>
+                <span class="line line-bottom"></span>
+                <span class="line line-left"></span>
+                Play
+                </a>
+            </div>
+            <div class="link touch-link">
+                <a  href="{% url 'myblog:newpage' %}"
+                class="button" data-title="This is my playground demos">
+                <span class="line line-top"></span>
+                <span class="line line-right"></span>
+                <span class="line line-bottom"></span>
+                <span class="line line-left"></span>
+                Touch
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="section1">
+        <div class="inner">
+        </div>
+    </div>
+    <div class="section2">
+        <!-- artical about al -->
+        <div class="artical al">
+            <img src="../../static/img/hamster.jpg" alt="artical1_img">
+            <div class="artical_pre">
+                <div class="inner">
+                    <h2>{{artical_al.title}}</h2>
+                    <div class="hr"></div>
+                    <div class="article_body">
+                        {% autoescape off %}
+                        {{ artical_al.body }}
+                        {% endautoescape %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- artical about be -->
+        <div class="artical be">
+            <div class="artical_pre">
+                <div class="inner">
+                    <h2>{{article_be.title}}</h2>
+                    <div class="hr"></div>
+                    <div class="artical_body">
+                        {% autoescape off %}
+                        {{article_be.abstract}}
+                        {% endautoescape %}
+                    </div>
+                </div>
+            </div>
+            <img src="../../static/img/hamster.jpg" alt="artical1_img">
+        </div>
+        <!-- artical about ga -->
+        <div class="artical ga">
+            <img src="../../static/img/hamster.jpg" alt="artical1_img">
+            <div class="artical_pre">
+                <div class="inner">
+                    <h2>{{article_ga.title}}</h2>
+                    <div class="hr"></div>
+                    <div class="article_body">
+                        {% autoescape off %}
+                        {{article_ga.body}}
+                        {% endautoescape %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

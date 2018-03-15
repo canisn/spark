@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}resultForm{% endblock %}
+
+{% block content %}
+    <p>
+    {% if books %}
+        {% for book in books %}
+        <li>{{ book.title }}</li>
+        {% endfor %}
+    {% else %}
+        <p>
+            No book matched you query.
+        </p>
+    {% endif %}
+{% endblock %}
